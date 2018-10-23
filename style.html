@@ -1,0 +1,111 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    background-color:lightblue;
+	background-repeat:no-repeat;
+	text-align:center;
+	background-image:url(idk.gif);
+	background-size:100% 100%;
+	
+	margin:auto;
+	
+}
+
+h1 {
+	 margin-top:65px;
+	 font-size:95px;
+	 text-align:center;
+	 color:white;
+	 font-family:Sans Serif;
+	 margin-left:10px;
+	 
+}
+
+a {
+  color: #ffb600;
+  text-decoration: none;
+  font-size:30px;
+ 
+}
+
+
+a:hover {
+  color: #ffd366;
+}
+
+/*#a1 {
+	 margin-left:600px;
+}
+
+
+#a2 {
+	 margin-left:400px;
+}
+#a3 {
+	 margin-left:600px;
+}
+*/
+.inner {
+  width: 1400px;     /*for position */
+  
+}
+
+.activity {
+  padding: 0;
+  margin: 8em 0;
+  list-style: none;
+}
+.activity li {
+  -webkit-transition: box-shadow 0.2s ease;
+  -moz-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  color: #ffb600;
+  display: inline-block;
+  font-size: 1em;
+  height: 12em;
+  margin: 0 1em 1em;
+  position: relative;
+  text-align: center;
+  /*text-transform: lowercase; */
+  width: 12em;
+  line-height: 8em;
+}
+.activity li a {
+  position: absolute;
+  top:2;                      /*position of hurdle text */
+  right: 0;
+  bottom: 3;
+  left: 0;
+}
+.activity li:hover {
+  box-shadow: 0 0 0 10px #fff;
+}
+.activity li:hover:before {
+  -webkit-transform: scale(0.925);
+  -moz-transform: scale(0.925);
+  -ms-transform: scale(0.925);
+  -o-transform: scale(0.925);
+  transform: scale(0.925);
+  box-shadow: 0 0 0 5px #fff;
+  opacity: .5;
+}
+.activity li:before {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  bottom: 0;
+  box-shadow: 0 0 0 10px #fff;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

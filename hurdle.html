@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Hurdle</title>
+  <script language=JavaScript>
+function ieClicked() {
+    if (document.all) {
+        return false;
+    }
+}
+function firefoxClicked(e) {
+    if(document.layers||(document.getElementById&&!document.all)) {
+        if (e.which==2||e.which==3) {
+            return false;
+        }
+    }
+}
+if (document.layers){
+    document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown=firefoxClicked;
+}else{
+    document.onmouseup=firefoxClicked;
+    document.oncontextmenu=ieClicked;
+}
+document.oncontextmenu=new Function("return false")
+function disableselect(e){
+    return false
+    }
+    function reEnable(){
+    return true
+    }
+    document.onselectstart=new Function ("return false")
+    if (window.sidebar){
+    document.onmousedown=disableselect
+    document.onclick=reEnable
+    }
+</script>
+  
+   <script language=JavaScript>
+<!--
+
+//Disable right mouse click Script
+//By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="Function Disabled!";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// --> 
+</script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ 
+      <link rel="stylesheet">
+      <style>
+      
+      
+      * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    background-color:lightblue;
+	background-repeat:no-repeat;
+	text-align:center;
+	background-image:url(idk.gif);
+	background-size:120% 160%;
+	
+	margin:auto;
+	
+}
+
+h1 {
+	 margin-top:10x;
+	 font-size:80px;
+	 text-align:center;
+	 color:white;
+	 font-family:Sans Serif;
+	 margin-left:10px;
+	 
+}
+
+a {
+  color: #ffb600;
+  text-decoration: none;
+  font-size:30px;
+ 
+}
+
+
+a:hover {
+  color: #ffd366;
+}
+
+*/
+.inner {
+  width: 1300px;     /*for position */
+  
+}
+
+.activity {
+  padding: 0;
+  margin: 6.1em 0;
+  list-style: none;
+}
+.activity li {
+  -webkit-transition: box-shadow 0.2s ease;
+  -moz-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  color: #ffb600;
+  display: inline-block;
+  font-size: 1em;
+  height: 12em;
+  margin: 0 1em 1em;
+  position: relative;
+  text-align: center;
+  /*text-transform: lowercase; */
+  width: 12em;
+  line-height: 8em;
+}
+.activity li a {
+  position: absolute;
+  top:2;                      /*position of hurdle text */
+  right: 0;
+  bottom: 3;
+  left: 0;
+}
+.activity li:hover {
+  box-shadow: 0 0 0 10px #fff;
+}
+.activity li:hover:before {
+  -webkit-transform: scale(0.925);
+  -moz-transform: scale(0.925);
+  -ms-transform: scale(0.925);
+  -o-transform: scale(0.925);
+  transform: scale(0.925);
+  box-shadow: 0 0 0 5px #fff;
+  opacity: .5;
+}
+.activity li:before {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  bottom: 0;
+  box-shadow: 0 0 0 10px #fff;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.button {
+  padding: 10px 10px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin : auto ;
+  
+  
+  display : block ;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+      
+      </style>
+<script>
+ 	function preventBack(){window.history.forward();}
+ 	  setTimeout("preventBack()", 0);
+ 	  window.onunload=function(){null};
+ 	</script>
+  
+</head>
+
+<body>
+  <!-- http://cmdz.hunie.co/ -->
+
+<h1>Decipher It</h1>
+
+<section>
+  <div class="inner">
+    <ul class="activity">
+      <li>
+        <div id="a1"><a href="level1.jsp"><strong>Hurdle 1</strong></a></div>
+      </li>
+      <li>
+        <div id="a2"><a href="level2.jsp"><strong>Hurdle 2</strong></a></div>
+      </li>
+      <li>
+        <div id="a3"><a href="level3.jsp"><strong>Hurdle 3</strong></a></div>
+      </li>
+      
+    </ul>
+  </div>
+</section>
+  
+  <div id="a"><a href="anime2.jsp "><button class = "button" style="margin-bottom:9px ; margin-left:1100px">EXIT</button></a></div>
+</body>
+</html>

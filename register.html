@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<title>Registration</title>
+  
+<script language=JavaScript>
+<!--
+
+//Disable right mouse click Script
+//By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="Function Disabled!";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// --> 
+</script>
+<style>
+h1{
+	text-align:center;
+	color:white;
+	font-size:95px;
+	
+	
+}
+p{
+	color:white;
+	text-align:center;
+	font-size:30px;
+	padding-right:20px;
+}
+body
+{
+	background-size:100% 100%;
+	background-image:url('img.jpg');
+	background-repeat:no-repeat;
+	background-position:center;
+	
+}
+
+.aa
+{
+	width:50%;
+	height:auto;
+	padding-left:30px;
+	margin-left:350px;
+	align-items:center;
+	font-weight:bold;
+       background-color:rgba(0,0,0,0.3);
+	color:white;
+	border-radius:20px;
+	box-shadow:inset-4px -4px rgba(0,0,0,0.8);
+	
+	
+	}
+		.aa input[type="text"]
+	{
+		padding-left:30px;
+		border-radius:5px;
+		margin-left:150px;
+		-webkit-transition:0.8s;
+		transition:0.8s;
+		border:3px solid black;
+	}
+	.aa input[type="text"]:focus {
+	    border:10px solid  black;
+	      
+	}
+	.aa input[type="email"]
+	{
+		padding-left:30px;
+		border-radius:5px;
+		-webkit-transition:0.5s;
+		transition:0.5s;
+		border:3px solid black;
+		
+	}
+	.aa input[type="submit"]{
+
+		padding-left:10px;
+		text-align:center;
+		font-weight:bold;
+						margin-left:150px;
+		
+		border-radius:5px;
+		margin-top:20px;
+		margin-left:40px;	
+	}
+</style>
+<script>
+ 	function preventBack(){window.history.forward();}
+ 	  setTimeout("preventBack()", 0);
+ 	  window.onunload=function(){null};
+ 	</script>
+</head>
+<body>
+<div>
+<h1>DECIPHER IT!</h1>
+<div class="aa">
+<p>REGISTER</p>
+<form id="form" action="con1.jsp" method="POST">
+<p style="font-size:25px">Player1:<input type="text"  name="name1" required id="valid1"></p>
+<p style="font-size:25px">Player2:<input type="text"  name="name2" required  id="valid2"></p>
+<p style="font-size:25px">Team name:<input type="text"  name="team_name" required id="valid3" style="margin-left:115px"></p>
+<p style="font-size:25px">E-mail:<input  type="email" name="email" id="valid4" required style="margin-left:159px"></p>
+<p style="font-size:25px">College:<input type="text"  name="clg" required id="valid5"></p>
+<p style="font-size:25px">Contact no:<input type="text"  name="cntct" required minlength="10" id="valid3" style="margin-left:115px"></p>
+
+<input type="submit" value="REGISTER" style="margin-left:255px; height:50px"><br><br>
+</form>
+</div>
+</div>
+
+</body>
+
+</html>
